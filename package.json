@@ -1,0 +1,14 @@
+{
+  "name": "amn-token-contract",
+  "version": "0.1.0",
+  "description": "Amon token (AMN) smart contract",
+  "scripts": {
+    "test": "truffle test",
+    "dev": "truffle develop"
+  },
+  "author": "amon (hello@amon.tech)",
+  "license": "ISC",
+  "dependencies": {
+    "zeppelin-solidity": "^1.5.0"
+  }
+}
