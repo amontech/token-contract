@@ -111,14 +111,18 @@ contract('AMNToken', ([owner, account1, account2]) => {
     let emptyContractBalance = await amnToken.balanceOf(emptyContract.address);
     emptyContractBalance.should.be.bignumber.equal(0);
 
+    let thrown = false;
     try {
       await amnToken.transfer(emptyContract.address, amount, { from: owner });
     } catch(error) {
+      thrown = true;
       assert(error.message.includes('revert'));
       emptyContractBalance = await amnToken.balanceOf(emptyContract.address);
       emptyContractBalance.should.be.bignumber.equal(0);
     }
 
+    assert(thrown);
+    
   });
 
 });
