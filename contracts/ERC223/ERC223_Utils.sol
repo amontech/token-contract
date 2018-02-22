@@ -1,8 +1,8 @@
 pragma solidity ^0.4.19;
 
 /**
- * @title Math
- * @dev Assorted math operations
+ * @title ERC223Utils
+ * @dev Detect contracts
  */
 library ERC223Utils {
 

@@ -35,8 +35,8 @@ contract ERC223BasicToken is ERC223Interface, BasicToken {
      */
     function transfer(address _to, uint _value, bytes _data) public returns (bool success) {
 
-      require(_to != address(0));
-      require(_value <= balances[msg.sender]);
+      if((_to == address(0))) revert();
+      if(_value > balances[msg.sender]) revert();
 
       balances[msg.sender] = balances[msg.sender].sub(_value);
       balances[_to] = balances[_to].add(_value);
