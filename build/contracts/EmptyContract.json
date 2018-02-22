@@ -1,0 +1,129 @@
+{
+  "contractName": "EmptyContract",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820337a0ca4796ece7166fb7713d2a23b767a7a7c70fb716c51e2eee35446a34b9e0029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820337a0ca4796ece7166fb7713d2a23b767a7a7c70fb716c51e2eee35446a34b9e0029",
+  "sourceMap": "26:72:5:-;;;56:39;;;;;;;;26:72;;;;;;",
+  "deployedSourceMap": "26:72:5:-;;;;;",
+  "source": "pragma solidity ^0.4.19;\n\ncontract EmptyContract {\n\n    function EmptyContract() public {\n    }\n\n}\n",
+  "sourcePath": "/Users/paco/Development/amon/token-contract/contracts/EmptyContract.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/paco/Development/amon/token-contract/contracts/EmptyContract.sol",
+      "exportedSymbols": {
+        "EmptyContract": [
+          226
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".19"
+          ]
+        },
+        "id": 221,
+        "name": "PragmaDirective",
+        "src": "0:24:5"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            226
+          ],
+          "name": "EmptyContract",
+          "scope": 227
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "EmptyContract",
+              "payable": false,
+              "scope": 226,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 222,
+                "name": "ParameterList",
+                "src": "78:2:5"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 223,
+                "name": "ParameterList",
+                "src": "88:0:5"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 224,
+                "name": "Block",
+                "src": "88:7:5"
+              }
+            ],
+            "id": 225,
+            "name": "FunctionDefinition",
+            "src": "56:39:5"
+          }
+        ],
+        "id": 226,
+        "name": "ContractDefinition",
+        "src": "26:72:5"
+      }
+    ],
+    "id": 227,
+    "name": "SourceUnit",
+    "src": "0:99:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-22T16:06:59.983Z"
+}

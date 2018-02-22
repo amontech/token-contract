@@ -1,0 +1,333 @@
+{
+  "contractName": "ERC223Utils",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_addr",
+          "type": "address"
+        }
+      ],
+      "name": "isContract",
+      "outputs": [
+        {
+          "name": "is_contract",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b60aa8061001d6000396000f300606060405260043610603e5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631627905581146043575b600080fd5b606273ffffffffffffffffffffffffffffffffffffffff600435166076565b604051901515815260200160405180910390f35b6000903b11905600a165627a7a7230582096bbc09b7e21404e08b99b03d484d446e709fc3ae26f2f8a83730e9c4a3a5ea00029",
+  "deployedBytecode": "0x606060405260043610603e5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631627905581146043575b600080fd5b606273ffffffffffffffffffffffffffffffffffffffff600435166076565b604051901515815260200160405180910390f35b6000903b11905600a165627a7a7230582096bbc09b7e21404e08b99b03d484d446e709fc3ae26f2f8a83730e9c4a3a5ea00029",
+  "sourceMap": "81:396:4:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "81:396:4:-;;;;;;;;;;;;;;;;;;;;;;;200:274;;;;;;;;;;;;;;;;;;;;;;;;;;256:16;417:11;;458:8;;200:274::o",
+  "source": "pragma solidity ^0.4.19;\n\n/**\n * @title ERC223Utils\n * @dev Detect contracts\n */\nlibrary ERC223Utils {\n\n    //assemble the given address bytecode. If bytecode exists then the _addr is a contract.\n    function isContract(address _addr) public view returns (bool is_contract) {\n      uint length;\n      assembly {\n            //retrieve the size of the code on target address, this needs assembly\n            length := extcodesize(_addr)\n      }\n      return (length>0);\n    }\n\n}\n",
+  "sourcePath": "/Users/paco/Development/amon/token-contract/contracts/ERC223/ERC223_Utils.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/paco/Development/amon/token-contract/contracts/ERC223/ERC223_Utils.sol",
+      "exportedSymbols": {
+        "ERC223Utils": [
+          219
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".19"
+          ]
+        },
+        "id": 201,
+        "name": "PragmaDirective",
+        "src": "0:24:4"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": "@title ERC223Utils\n@dev Detect contracts",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            219
+          ],
+          "name": "ERC223Utils",
+          "scope": 220
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "isContract",
+              "payable": false,
+              "scope": 219,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_addr",
+                      "scope": 218,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 202,
+                        "name": "ElementaryTypeName",
+                        "src": "220:7:4"
+                      }
+                    ],
+                    "id": 203,
+                    "name": "VariableDeclaration",
+                    "src": "220:13:4"
+                  }
+                ],
+                "id": 204,
+                "name": "ParameterList",
+                "src": "219:15:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "is_contract",
+                      "scope": 218,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 205,
+                        "name": "ElementaryTypeName",
+                        "src": "256:4:4"
+                      }
+                    ],
+                    "id": 206,
+                    "name": "VariableDeclaration",
+                    "src": "256:16:4"
+                  }
+                ],
+                "id": 207,
+                "name": "ParameterList",
+                "src": "255:18:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        null
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "length",
+                          "scope": 218,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 208,
+                            "name": "ElementaryTypeName",
+                            "src": "282:4:4"
+                          }
+                        ],
+                        "id": 209,
+                        "name": "VariableDeclaration",
+                        "src": "282:11:4"
+                      }
+                    ],
+                    "id": 210,
+                    "name": "VariableDeclarationStatement",
+                    "src": "282:11:4"
+                  },
+                  {
+                    "attributes": {
+                      "externalReferences": [
+                        {
+                          "length": {
+                            "declaration": 209,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "407:6:4",
+                            "valueSize": 1
+                          }
+                        },
+                        {
+                          "_addr": {
+                            "declaration": 203,
+                            "isOffset": false,
+                            "isSlot": false,
+                            "src": "429:5:4",
+                            "valueSize": 1
+                          }
+                        }
+                      ],
+                      "operations": "{\n    length := extcodesize(_addr)\n}"
+                    },
+                    "children": [],
+                    "id": 211,
+                    "name": "InlineAssembly",
+                    "src": "301:155:4"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 207
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 209,
+                                  "type": "uint256",
+                                  "value": "length"
+                                },
+                                "id": 212,
+                                "name": "Identifier",
+                                "src": "458:6:4"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 213,
+                                "name": "Literal",
+                                "src": "465:1:4"
+                              }
+                            ],
+                            "id": 214,
+                            "name": "BinaryOperation",
+                            "src": "458:8:4"
+                          }
+                        ],
+                        "id": 215,
+                        "name": "TupleExpression",
+                        "src": "457:10:4"
+                      }
+                    ],
+                    "id": 216,
+                    "name": "Return",
+                    "src": "450:17:4"
+                  }
+                ],
+                "id": 217,
+                "name": "Block",
+                "src": "274:200:4"
+              }
+            ],
+            "id": 218,
+            "name": "FunctionDefinition",
+            "src": "200:274:4"
+          }
+        ],
+        "id": 219,
+        "name": "ContractDefinition",
+        "src": "81:396:4"
+      }
+    ],
+    "id": 220,
+    "name": "SourceUnit",
+    "src": "0:478:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {
+    "42": {
+      "events": {},
+      "links": {},
+      "address": "0xd83d791f84e6c8ceaf9594d104131e1843e76f37"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-22T16:06:59.986Z"
+}

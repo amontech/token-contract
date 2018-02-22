@@ -7,10 +7,12 @@ require('chai')
 
 const AMNToken = artifacts.require('AMNToken');
 const ERC223ReceivingContract = artifacts.require('ERC223ReceivingContract');
+const EmptyContract = artifacts.require('EmptyContract');
 
 contract('AMNToken', ([owner, account1, account2]) => {
   let amnToken = null;
   let receivingContract = null;
+  let emptyContract = null;
 
   const _name = 'Amon';
   const _symbol = 'AMN';
@@ -20,6 +22,7 @@ contract('AMNToken', ([owner, account1, account2]) => {
   beforeEach(async function () {
     amnToken = await AMNToken.new();
     receivingContract = await ERC223ReceivingContract.new();
+    emptyContract = await EmptyContract.new();
   });
 
   it('has a name', async function () {
@@ -64,6 +67,7 @@ contract('AMNToken', ([owner, account1, account2]) => {
     assert.equal(logs[0].args.from, owner);
     assert.equal(logs[0].args.to, account1);
     assert(logs[0].args.value.eq(amount));
+
   });
 
   it('transfer to contract', function (done) {
@@ -98,6 +102,22 @@ contract('AMNToken', ([owner, account1, account2]) => {
       });
 
     })().catch(done);
+
+  });
+
+  it('cannot transfer to empty contract', async function () {
+
+    const amount = 100;
+    let emptyContractBalance = await amnToken.balanceOf(emptyContract.address);
+    emptyContractBalance.should.be.bignumber.equal(0);
+
+    try {
+      await amnToken.transfer(emptyContract.address, amount, { from: owner });
+    } catch(error) {
+      assert(error.message.includes('revert'));
+      emptyContractBalance = await amnToken.balanceOf(emptyContract.address);
+      emptyContractBalance.should.be.bignumber.equal(0);
+    }
 
   });
 
