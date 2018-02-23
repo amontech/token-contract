@@ -1,2 +1,6 @@
 build
 node_modules
+.env
+.idea
+yarn.lock
+package-lock.json

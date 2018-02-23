@@ -1,8 +1,13 @@
 # AMN Token
 
-This repository holds the source code of the ERC20 Amon Token (AMN) Ethereum smart contract.
+Source code for Amon Token (AMN) Ethereum smart contract.
 
-Dependencies
+
+## Description
+
+This token respects the ERC20 and ERC223 standards.
+
+### Dependencies
   - Truffle
   - OpenZeppelin
   - Solidity
