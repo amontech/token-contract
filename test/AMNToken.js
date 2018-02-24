@@ -48,7 +48,7 @@ contract('AMNToken', function ([owner, recipient, anotherAccount]) {
     it('returns the total amount of tokens', async function () {
       const totalSupply = await this.token.totalSupply();
 
-      assert.equal(totalSupply, _totalSupply);
+      totalSupply.should.be.bignumber.equal(_totalSupply);
     });
 
     it('total given to owner', async function () {

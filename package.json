@@ -1,10 +1,14 @@
 {
   "name": "amn-token-contract",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Amon token (AMN) smart contract",
   "scripts": {
     "test": "truffle test",
-    "dev": "truffle develop"
+    "dev": "truffle develop",
+    "flatten": "truffle-flattener contracts/AMNToken.sol > build/AMNTokenFlat.sol",
+    "deploy:kovan": "truffle migrate --network kovan",
+    "deploy:rinkeby": "truffle migrate --network rinkeby",
+    "deploy:mainnet": "truffle migrate --network mainnet"
   },
   "author": "amon (hello@amon.tech)",
   "license": "ISC",
@@ -13,6 +17,8 @@
     "chai-as-promised": "^7.1.1",
     "chai-bignumber": "^2.0.2",
     "dotenv": "^5.0.0",
+    "truffle": "^4.0.6",
+    "truffle-flattener": "^1.2.3",
     "truffle-hdwallet-provider": "0.0.3",
     "zeppelin-solidity": "^1.7.0"
   }
