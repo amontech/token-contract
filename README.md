@@ -9,6 +9,7 @@ This token respects the ERC20 standard. And is
 
 ## Addresses
 
+- *Mainnet*: [0x737f98ac8ca59f2c68ad658e3c3d8c8963e40a4c](https://etherscan.io/token/0x737f98ac8ca59f2c68ad658e3c3d8c8963e40a4c)
 - *Kovan*: [0x5870042b67353a2e037c76777f3bd7d0ef222762](https://kovan.etherscan.io/token/0x5870042b67353a2e037c76777f3bd7d0ef222762)
 
 ## Dependencies versions
