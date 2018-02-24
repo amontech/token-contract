@@ -9,8 +9,7 @@ This token respects the ERC20 standard. And is
 
 ## Addresses
 
-- *Mainnet*: [0x0a45005dc516d5243c4ac89345e1f95959b4ebaa](https://etherscan.io/token/0x0a45005dc516d5243c4ac89345e1f95959b4ebaa)
-- *Kovan*: [0x811a966331231fc308b173ade678978e21a910c4](https://kovan.etherscan.io/token/0x811a966331231fc308b173ade678978e21a910c4)
+- *Kovan*: [0x5870042b67353a2e037c76777f3bd7d0ef222762](https://kovan.etherscan.io/token/0x5870042b67353a2e037c76777f3bd7d0ef222762)
 
 ## Dependencies versions
   - Truffle 4.0.6

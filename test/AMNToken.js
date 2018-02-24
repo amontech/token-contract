@@ -8,7 +8,7 @@ require('chai')
 const _name = 'Amon';
 const _symbol = 'AMN';
 const _decimals = 18;
-const _totalSupply = (1.6 * 10 ** 9) * (10 ** _decimals);
+const _totalSupply = (1666666667) * (10 ** _decimals);
 
 const assertRevert = async promise => {
   try {

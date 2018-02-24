@@ -6,7 +6,7 @@ contract AMNToken is StandardToken {
   string  public constant name = "Amon";
   string  public constant symbol = "AMN";
   uint8   public constant decimals = 18;
-  uint256 public constant INITIAL_SUPPLY = (1.6 * 10 ** 9) * (uint256(10) ** decimals);
+  uint256 public constant INITIAL_SUPPLY = (1666666667) * (uint256(10) ** decimals);
 
   /**
     *@dev Constructor that set the token initial parameters
